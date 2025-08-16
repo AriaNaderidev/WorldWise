@@ -1,0 +1,8 @@
+.container {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(53, 121, 84, 0.918);
+  font-size: 20px;
+}
