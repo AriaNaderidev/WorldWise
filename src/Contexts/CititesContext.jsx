@@ -3,7 +3,7 @@ import { createContext, useContext, useState, useEffect } from "react";
 const CitiesContext = createContext();
 
 const CitiesProvider = ({ children }) => {
-  const BASE_URL = "http://localhost:8000";
+  const BASE_URL = "https://fake-server-gamma.vercel.app";
 
   const [cities, setCities] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
