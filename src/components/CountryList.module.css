@@ -1,4 +1,4 @@
-.countryList {
+/* .countryList {
   width: 100%;
   height: 65vh;
   list-style: none;
@@ -9,4 +9,36 @@
   grid-template-columns: 1fr 1fr;
   align-content: start;
   gap: 1.6rem;
+} */
+
+.countryList {
+  width: 100%;
+  height: 65vh;
+  list-style: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: start;
+  gap: 1.6rem;
+  box-sizing: border-box;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .countryList {
+    height: 50vh;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .countryList {
+    height: 40vh;
+    gap: 0.6rem;
+    grid-template-columns: 1fr;
+    padding: 0.2rem 0;
+  }
 }

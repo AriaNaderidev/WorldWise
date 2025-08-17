@@ -1,8 +1,41 @@
-.footer {
+/* .footer {
   margin-top: auto;
 }
 
 .copyright {
   font-size: 1.2rem;
   color: var(--color-light--1);
+} */
+
+.footer {
+  margin-top: auto;
+  padding: 1.2rem 2rem;
+  background: var(--color-dark--2);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.copyright {
+  font-size: 1.2rem;
+  color: var(--color-light--1);
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .footer {
+    padding: 0.8rem 1rem;
+  }
+  .copyright {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .footer {
+    padding: 0.5rem 0.5rem;
+  }
+  .copyright {
+    font-size: 0.9rem;
+  }
 }

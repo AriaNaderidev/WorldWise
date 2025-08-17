@@ -1,8 +1,38 @@
-.container {
+/* .container {
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(53, 121, 84, 0.918);
   font-size: 20px;
+} */
+
+.container {
+  min-height: 100px;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(53, 121, 84, 0.918);
+  font-size: 20px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .container {
+    font-size: 16px;
+    height: 25vh;
+    padding: 0.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .container {
+    font-size: 14px;
+    height: 20vh;
+    padding: 0.2rem;
+  }
 }

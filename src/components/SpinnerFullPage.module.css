@@ -1,5 +1,28 @@
+/* .spinnerFullpage {
+  margin: 2.5rem;
+  height: calc(100vh - 5rem);
+  background-color: var(--color-dark--1);
+} */
+
 .spinnerFullpage {
   margin: 2.5rem;
   height: calc(100vh - 5rem);
   background-color: var(--color-dark--1);
+  box-sizing: border-box;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .spinnerFullpage {
+    margin: 1.2rem;
+    height: calc(100vh - 2.5rem);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .spinnerFullpage {
+    margin: 0.5rem;
+    height: 100vh;
+  }
 }

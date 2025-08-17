@@ -1,7 +1,34 @@
+/* .app {
+  height: 100vh;
+  padding: 2.4rem;
+  overscroll-behavior-y: none;
+  display: flex;
+  position: relative;
+} */
+
 .app {
   height: 100vh;
   padding: 2.4rem;
   overscroll-behavior-y: none;
   display: flex;
   position: relative;
+  flex-direction: row;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .app {
+    padding: 1.2rem;
+    flex-direction: column;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .app {
+    padding: 0.6rem;
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
 }
