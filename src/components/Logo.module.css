@@ -4,23 +4,20 @@
 
 .logo {
   height: 5.2rem;
-  width: auto;
   display: block;
+  width: auto;
 }
 
 /* Tablet */
 @media (max-width: 900px) {
   .logo {
-    position: absolute;
-    left: 13px;
-    top: 11px;
-    height: 3.5rem;
+    height: 4rem;
   }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
   .logo {
-    height: 2.2rem;
+    height: 3.5rem;
   }
 }

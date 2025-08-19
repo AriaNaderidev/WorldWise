@@ -2,9 +2,8 @@ import { useNavigate } from "react-router-dom";
 import styles from "./Map.module.css";
 import Button from "./Button";
 
-import L from 'leaflet';
-import marker from '../assets/marker.png'
-
+import L from "leaflet";
+import marker from "../assets/marker.png";
 
 import {
   MapContainer,
@@ -40,12 +39,10 @@ const Map = () => {
 
   const customIcon = L.icon({
     iconUrl: marker,
-    iconSize: [50, 50],     // width, height
-    iconAnchor: [15, 45],   // anchor point [x, y]
-    popupAnchor: [0, -40],  // where the popup shows up
+    iconSize: [50, 50], // width, height
+    iconAnchor: [15, 45], // anchor point [x, y]
+    popupAnchor: [0, -40], // where the popup shows up
   });
-
-  
 
   return (
     <div className={styles.mapContainer}>
@@ -67,7 +64,7 @@ const Map = () => {
         {cities.map((city) => (
           <Marker
             position={[city.position.lat, city.position.lng]}
-            key={city.id}
+            key={city.position.lat}
             icon={customIcon}
           >
             <Popup>

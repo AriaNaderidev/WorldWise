@@ -21,9 +21,9 @@ function City() {
     getCity(id);
   }, [id]);
 
-  const { cityName, emoji, date, notes } = currentCity;
+  const { cityName, emoji, date, notes } = currentCity || {};
 
-  if (isLoading) return <Spinner />;
+  if (isLoading || !currentCity) return <Spinner />;
 
   return (
     <div className={styles.city}>

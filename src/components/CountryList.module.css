@@ -30,6 +30,7 @@
     height: 50vh;
     gap: 1rem;
     grid-template-columns: 1fr;
+    margin-top: 25px;
   }
 }
 

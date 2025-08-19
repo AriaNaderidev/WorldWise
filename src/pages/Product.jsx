@@ -7,6 +7,7 @@ const Product = () => {
       <PageNav />
       <section>
         <img
+          id="landImg"
           src="/images/img-1.jpg"
           alt="person with dog overlooking mountain with sunset"
         />

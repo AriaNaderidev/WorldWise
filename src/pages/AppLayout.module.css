@@ -26,9 +26,7 @@
 /* Mobile */
 @media (max-width: 600px) {
   .app {
-    padding: 0.6rem;
+    padding: 1rem;
     flex-direction: column;
-    height: auto;
-    min-height: 100vh;
   }
 }

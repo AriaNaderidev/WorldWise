@@ -7,15 +7,23 @@ const CitiesProvider = ({ children }) => {
 
   const [cities, setCities] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [currentCity, setCurrentCity] = useState({});
-
+  const [currentCity, setCurrentCity] = useState(null);
   useEffect(() => {
     (async () => {
       try {
         setIsLoading(true);
-        const res = await fetch(`${BASE_URL}/cities`);
-        const data = await res.json();
-        setCities(data);
+
+        const storedData = JSON.parse(localStorage.getItem("cities")) || [];
+
+        if (storedData.length > 0) {
+          setCities(storedData);
+        } else {
+          const res = await fetch(`${BASE_URL}/cities`);
+          const data = await res.json();
+
+          setCities(data);
+          localStorage.setItem("cities", JSON.stringify(data));
+        }
       } catch {
         alert("There was an error loading data...");
       } finally {
@@ -27,9 +35,15 @@ const CitiesProvider = ({ children }) => {
   const getCity = async (id) => {
     try {
       setIsLoading(true);
-      const res = await fetch(`${BASE_URL}/cities/${id}`);
-      const data = await res.json();
-      setCurrentCity(data);
+
+      const storedData = JSON.parse(localStorage.getItem("cities")) || [];
+      const city = storedData.find((c) => String(c.id) === String(id));
+      if (!city) {
+        const res = await fetch(`${BASE_URL}/cities/${id}`);
+        const data = await res.json();
+        setCurrentCity(data);
+      }
+      setCurrentCity(city);
     } catch {
       alert("There was an error loading data...");
     } finally {
@@ -40,15 +54,18 @@ const CitiesProvider = ({ children }) => {
   const createCity = async (newCity) => {
     try {
       setIsLoading(true);
-      const res = await fetch(`${BASE_URL}/cities`, {
-        method: "POST",
-        body: JSON.stringify(newCity),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      const data = await res.json();
-      setCities((cities) => [...cities, data]);
+
+      localStorage.setItem("cities", JSON.stringify([...cities, newCity]));
+
+      // const res = await fetch(`${BASE_URL}/cities`, {
+      //   method: "POST",
+      //   body: JSON.stringify(newCity),
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      // });
+      // const data = await res.json();
+      setCities((cities) => [...cities, newCity]);
     } catch {
       alert("There was an error creating city.");
     } finally {
@@ -62,7 +79,7 @@ const CitiesProvider = ({ children }) => {
       await fetch(`${BASE_URL}/cities/${id}`, {
         method: "DELETE",
       });
-
+      localStorage.removeItem("cities");
       setCities((cities) => cities.filter((city) => city.id !== id));
     } catch {
       alert("There was an error deleting city.");

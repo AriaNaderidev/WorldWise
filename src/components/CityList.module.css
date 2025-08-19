@@ -34,7 +34,7 @@
 /* Tablet */
 @media (max-width: 900px) {
   .cityList {
-    height: 50vh;
+    height: auto;
     gap: 1rem;
   }
 }
@@ -42,7 +42,7 @@
 /* Mobile */
 @media (max-width: 600px) {
   .cityList {
-    height: 40vh;
+    height: 35vh;
     gap: 0.6rem;
     padding: 0.2rem 0;
   }

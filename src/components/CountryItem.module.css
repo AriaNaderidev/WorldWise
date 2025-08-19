@@ -52,7 +52,7 @@
 /* Mobile */
 @media (max-width: 600px) {
   .countryItem {
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 0.5rem 0.5rem;
     border-radius: 4px;
     gap: 0.1rem;

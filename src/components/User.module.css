@@ -35,18 +35,24 @@
 
 .user {
   position: absolute;
-  top: 4.2rem;
-  right: 4.2rem;
+  top: 3.6rem;
+  right: 3rem;
   background-color: transparent;
   padding: 1rem 1.4rem;
   border-radius: 7px;
-  z-index: 999;
+  z-index: 1000;
   box-shadow: 0 0.8rem 2.4rem rgba(36, 42, 46, 0.5);
   font-size: 1.6rem;
   font-weight: 600;
   display: flex;
   align-items: center;
   gap: 1.6rem;
+}
+
+.user span {
+  background-color: var(--color-dark--2);
+  border-radius: 7px;
+  padding: 0.6rem 1.2rem;
 }
 
 .user img {
@@ -70,19 +76,19 @@
 /* Tablet */
 @media (max-width: 900px) {
   .user {
-    top: 2rem;
+    top: 2.5rem;
     right: 2rem;
     padding: 0.7rem 1rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     gap: 1rem;
     border-radius: 5px;
   }
   .user img {
-    height: 2.8rem;
+    height: 3.8rem;
   }
   .user button {
     padding: 0.5rem 0.8rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
     border-radius: 5px;
   }
 }
@@ -90,19 +96,24 @@
 /* Mobile */
 @media (max-width: 600px) {
   .user {
-    top: 0.7rem;
-    right: 0.7rem;
+    top: 2rem;
+    right: 1rem;
     padding: 0.4rem 0.5rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
     gap: 0.5rem;
     border-radius: 4px;
   }
+
+  .user span {
+    display: none;
+  }
   .user img {
-    height: 1.8rem;
+    height: 3.7rem;
+    display: none;
   }
   .user button {
     padding: 0.3rem 0.5rem;
-    font-size: 0.8rem;
+    font-size: 1.5rem;
     border-radius: 4px;
   }
 }

@@ -10,7 +10,7 @@
 } */
 
 .sidebar {
-  flex-basis: 56rem;
+  flex-basis: 50rem;
   background-color: var(--color-dark--1);
   padding: 3rem 5rem 3.5rem 5rem;
   display: flex;
@@ -25,7 +25,11 @@
   .sidebar {
     flex-basis: 100%;
     padding: 2rem 2rem 2.5rem 2rem;
-    height: auto;
+    max-height: 60%;
+  }
+
+  .sidebar > *:first-child {
+    align-self: flex-start;
   }
 }
 
@@ -34,6 +38,5 @@
   .sidebar {
     flex-basis: 100%;
     padding: 1rem 0.5rem 1.2rem 0.5rem;
-    height: auto;
   }
 }

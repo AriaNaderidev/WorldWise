@@ -34,7 +34,7 @@
 } */
 
 .homepage {
-  height: calc(100vh - 5rem);
+  height: calc(100vh - 6rem);
   margin: 2.5rem;
   background-image: linear-gradient(
       rgba(36, 42, 46, 0.8),
@@ -72,9 +72,8 @@
 /* Tablet */
 @media (max-width: 900px) {
   .homepage {
-    margin: 1.2rem;
     padding: 1.5rem 2rem;
-    height: 100vh;
+    height: calc(100vh - 6rem);
   }
 
   .homepage h1 {
@@ -90,15 +89,13 @@
 /* Mobile */
 @media (max-width: 600px) {
   .homepage {
-    margin: 0.5rem;
-    padding: 1rem 0.5rem;
-    height: auto;
-    min-height: 100vh;
+    height: calc(100vh - 6rem);
   }
 
   .homepage section {
     gap: 1.2rem;
     margin-top: 30px;
+    padding: 5px;
   }
 
   .homepage h1 {

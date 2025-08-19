@@ -68,7 +68,7 @@
   }
 
   .nav ul {
-    flex-direction: column;
+    flex-direction: row;
     border-radius: 5px;
   }
 
@@ -83,12 +83,13 @@
 /* Mobile */
 @media (max-width: 600px) {
   .nav {
+    flex-direction: row;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
   }
 
   .nav ul {
-    flex-direction: column;
+    flex-direction: row;
     border-radius: 4px;
   }
 

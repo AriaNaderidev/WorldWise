@@ -45,7 +45,9 @@
   position: relative;
   min-height: 300px;
 }
-
+.mapContainer > div {
+  height: 100%;
+}
 .map {
   height: 100%;
 }
@@ -81,7 +83,11 @@
 /* Tablet */
 @media (max-width: 900px) {
   .mapContainer {
-    min-height: 200px;
+    min-height: 40vh;
+  }
+
+  .mapContainer > div {
+    height: 100%;
   }
   :global(.leaflet-popup .leaflet-popup-content) {
     font-size: 1.2rem;
@@ -95,10 +101,10 @@
 /* Mobile */
 @media (max-width: 600px) {
   .mapContainer {
-    min-height: 200px;
+    min-height: 40vh;
   }
   .mapContainer > div {
-    height: 50vh;
+    height: 100%;
   }
   :global(.leaflet-popup .leaflet-popup-content) {
     font-size: 1rem;

@@ -38,7 +38,11 @@ a.ctaLink:visited {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  position: absolute;
+  top: 4%;
+  left: 5%;
+  right: 5%;
+  box-sizing: border-box;
 }
 
 .nav ul {
@@ -82,7 +86,6 @@ a.ctaLink:visited {
   .nav a:link,
   .nav a:visited {
     font-size: 1.1rem;
-    padding: 0.5rem 1.2rem;
   }
   a.ctaLink:link,
   a.ctaLink:visited {
@@ -95,9 +98,8 @@ a.ctaLink:visited {
 /* Mobile */
 @media (max-width: 600px) {
   .nav {
-    flex-direction: row;
-    align-items: stretch;
-    gap: 0.2rem;
+    flex-direction: column;
+    gap: 1rem;
   }
   .nav ul {
     flex-direction: row;
